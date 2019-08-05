@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_calories_set"
+        android:layout_width="400dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/tv_calories_goal_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Calorie Goal"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/tv_calories_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:layout_marginBottom="5dp"
+            android:text="0"
+            android:textColor="#00BFA5"
+            android:textSize="75dp" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_calories_consumed"
+        android:layout_width="400dp"
+        android:layout_height="160dp"
+        android:layout_below="@+id/cv_calories_set"
+        android:layout_marginTop="8dp">
+        <TextView
+            android:id="@+id/tv_calories_consumed_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:text="Calories Consumed"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/tv_calories_consumed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:text="@string/no_food_consumption"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#DD2C00"
+            android:textSize="75dp" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_calories_burnt"
+        android:layout_width="400dp"
+        android:layout_height="160dp"
+        android:layout_below="@+id/cv_calories_consumed"
+        android:layout_marginTop="8dp">
+        <TextView
+            android:id="@+id/tv_calories_burnt_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:text="Calories Burnt"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/tv_calories_burnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:text="@string/no_calories_burnt"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#64DD17"
+            android:textSize="75dp" />
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="24dp"
+    android:paddingTop="56dp"
+    android:paddingRight="24dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="72dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/steps_2" />
+
+    <!-- Daily Steps Label -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <EditText
+            android:id="@+id/input_steps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_your_steps_for_today"
+            android:inputType="number" />
+        <!-- Add Steps Button -->
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_add_steps"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:padding="12dp"
+            android:text="@string/add_steps"
+            android:background="#1C6B23"
+            android:foreground="?attr/selectableItemBackground"
+            android:textColor="#FDFDFE"/>
+
+        <TextView
+            android:id="@+id/tv_steps_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Steps" />
+    </android.support.design.widget.TextInputLayout>
+
+    <ListView
+        android:id="@+id/list_view_steps"
+        android:layout_width="match_parent"
+        android:layout_height="731dp" />
+
+    <Button
+        android:id="@+id/btn_send_report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_set_calorie_goal"
+        android:background="#DD2C00"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="12dp"
+        android:text="Send Report Manually"
+        android:textColor="#FDFDFE" />
+</LinearLayout>

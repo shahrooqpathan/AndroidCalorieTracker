@@ -1,0 +1,170 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <TextView
+        android:id="@+id/tv_daily_diet_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:text="Welcome to your Daily Diet Screen"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <RelativeLayout
+        android:id="@+id/rl_spinners_dietscreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_daily_diet_message"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/tv_spinner_label_food_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/food_category"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/spinner_food_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_spinner_label_food_category"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:entries="@array/activity_level"
+            android:hint="@string/food_category">
+
+        </Spinner>
+
+        <TextView
+            android:id="@+id/tv_spinner_label_food_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinner_food_category"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/food_item"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/spinner_food_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_spinner_label_food_item"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:entries="@array/activity_level"
+            android:hint="@string/food_tem">
+
+        </Spinner>
+        <Button
+            android:id="@+id/btn_add_consumption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner_food_item"
+            android:layout_marginTop="8dp"
+            android:text="Track Consumption"
+            android:background="#1C6B23"
+            android:foreground="?attr/selectableItemBackground"
+            android:textColor="#FDFDFE"/>
+    </RelativeLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/search_food_inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_spinners_dietscreen"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="8dp"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <EditText
+            android:id="@+id/edt_search_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Food Name"
+            android:inputType="text" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_search_food"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_food_inputLayout"
+        android:layout_marginTop="24dp"
+        android:padding="12dp"
+        android:text="Search Food"
+        android:background="#1C6B23"
+        android:foreground="?attr/selectableItemBackground"
+        android:textColor="#FDFDFE"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_search_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_search_food"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_ndb_search_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5px"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/iv_result_food"
+            android:layout_width="395dp"
+            android:layout_height="201dp"
+            android:layout_below="@+id/tv_ndb_search_result"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tv_result_food_snippet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/iv_result_food"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btn_add_food_to_db"
+            android:layout_width="171dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_result_food_snippet"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:text="Store Food"
+            android:visibility="gone"
+            android:background="#1C6B23"
+            android:foreground="?attr/selectableItemBackground"
+            android:textColor="#FDFDFE"/>
+
+        <Button
+            android:id="@+id/btn_cancel_add_food"
+            android:layout_width="171dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_result_food_snippet"
+            android:layout_toRightOf="@id/btn_add_food_to_db"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="4dp"
+            android:text="Cancel"
+            android:visibility="gone"
+            android:background="#DD2C00"
+            android:foreground="?attr/selectableItemBackground"
+            android:textColor="#FDFDFE"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/icons8_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_steps_screen"
+            android:icon="@drawable/foot_steps_icon"
+            android:title="@string/menu_steps" />
+        <item
+            android:id="@+id/nav_diet_screen"
+            android:icon="@drawable/diet_icon"
+            android:title="@string/menu_diet" />
+        <item
+            android:id="@+id/nav_map_screen"
+            android:icon="@drawable/park_icon"
+            android:title="@string/menu_map" />
+
+    </group>
+
+    <item android:title="Reports">
+        <menu>
+            <item
+                android:id="@+id/nav_reports"
+                android:icon="@drawable/report"
+                android:title="@string/view_reports" />
+            <item
+                android:id="@+id/nav_calorie_tracker_screen"
+                android:icon="@drawable/calories_icon"
+                android:title="@string/track_your_calories" />
+
+        </menu>
+    </item>
+
+</menu>
